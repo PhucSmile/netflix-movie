@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './MovieList.scss';
+import PropTypes from 'prop-types';
+
 import tmdbApi, { category } from '../../api/tmdbApi';
 
 import { Link } from 'react-router-dom';
@@ -11,7 +13,7 @@ import MovieItem from '../movieItem/MovieItem';
 const MovieList = (props) => {
     const [movies, setMovies] = useState([]);
 
-    // get API and similar
+    // get API and check similar
     useEffect(() => {
         const getMovies = async () => {
             let response = null;
@@ -50,6 +52,12 @@ const MovieList = (props) => {
             </Swiper>
         </div>
     );
+};
+
+MovieList.propTypes = {
+    type: PropTypes.string,
+    category: PropTypes.string,
+    id: PropTypes.number,
 };
 
 export default MovieList;

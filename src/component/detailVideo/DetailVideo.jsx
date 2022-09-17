@@ -37,6 +37,8 @@ const DetailVideo = (props) => {
     );
 };
 
-DetailVideo.propTypes = {};
+DetailVideo.propTypes = {
+    id: PropTypes.number.isRequired,
+};
 
 export default DetailVideo;

@@ -73,6 +73,7 @@
                 height: 40px;
                 border-radius: 50%;
                 border: 2px solid #ccc;
+                cursor: pointer;
             }
 
             .mobile__menu {
@@ -81,9 +82,9 @@
             }
         }
     }
-    .header__shrink {
-        transition: 0.4s;
-        background-color: var(--main-color);
+    &.header__shrink {
+        transition: 0.8s ease-in;
+        background-color: rgb(0 0 0 / 80%);
     }
 }
 

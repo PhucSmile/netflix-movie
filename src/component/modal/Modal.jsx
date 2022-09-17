@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Modal.scss';
 import CloseIcon from '@mui/icons-material/Close';
-// Lop overlay
-// file chức năng active nhận vào props active là true false và id
+
 const Modal = (props) => {
     const [active, setActive] = useState(false);
 
@@ -22,9 +21,9 @@ const Modal = (props) => {
 Modal.propTypes = {
     active: PropTypes.bool,
     id: PropTypes.string,
+    children: PropTypes.node,
 };
 
-// file này remove active khi click nào nút x
 export const ModalContent = (props) => {
     const contentRef = useRef(null);
 

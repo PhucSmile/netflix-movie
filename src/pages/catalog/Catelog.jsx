@@ -36,7 +36,6 @@ const Catelog = () => {
         const getList = async () => {
             let response = null;
 
-            // nếu value là chuỗi rỗng  và category là movie hoặc tvType
             if (debounced === '') {
                 const params = {};
                 switch (category) {
@@ -131,8 +130,8 @@ const Catelog = () => {
                 {/* movie list */}
                 <Row>
                     {movies.map((item, index) => (
-                        <Col xl={2} lg={3} md={3} sm={4} xs={6} className="mt-3 half-off">
-                            <MovieItem category={category} data={item} key={index} />
+                        <Col key={index} xl={2} lg={3} md={3} sm={4} xs={6} className="mt-3 half-off">
+                            <MovieItem category={category} data={item} />
                         </Col>
                     ))}
 

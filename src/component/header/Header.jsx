@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Header.scss';
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 

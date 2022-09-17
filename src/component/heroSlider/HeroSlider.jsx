@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './HeroSlider.scss';
+import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 
 import SwiperCore, { Autoplay } from 'swiper';
@@ -13,7 +14,6 @@ import apiConfig from '../../api/apiConfig';
 
 import { useNavigate } from 'react-router-dom';
 
-//swiper là thanh trược slide
 const HeroSlide = () => {
     SwiperCore.use([Autoplay]);
     const [movieItems, setMovieItems] = useState([]);
@@ -38,15 +38,15 @@ const HeroSlide = () => {
                 grabCursor={true}
                 spaceBetween={0}
                 slidesPerView={1}
-                autoplay={{ delay: 4000 }}
+                autoplay={{ delay: 3000 }}
             >
                 {movieItems.map((item, index) => (
                     <SwiperSlide key={index}>
                         {({ isActive }) => <HeroSliderItem item={item} className={`${isActive ? 'active' : ''}`} />}
                     </SwiperSlide>
                 ))}
-                {/* video trailer */}
             </Swiper>
+            {/* video trailer */}
             {movieItems.map((item, index) => (
                 <TrailerModal key={index} item={item} />
             ))}
@@ -120,6 +120,14 @@ const TrailerModal = (props) => {
             </ModalContent>
         </Modal>
     );
+};
+
+HeroSliderItem.propTypes = {
+    item: PropTypes.object.isRequired,
+};
+
+TrailerModal.propTypes = {
+    item: PropTypes.object.isRequired,
 };
 
 export default HeroSlide;

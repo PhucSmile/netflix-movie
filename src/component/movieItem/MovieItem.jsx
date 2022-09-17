@@ -72,6 +72,9 @@ const MovieItem = (props) => {
     );
 };
 
-MovieItem.propTypes = {};
+MovieItem.propTypes = {
+    data: PropTypes.object.isRequired,
+    category: PropTypes.string.isRequired,
+};
 
 export default MovieItem;

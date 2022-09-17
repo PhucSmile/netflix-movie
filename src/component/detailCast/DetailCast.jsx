@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './DetailCast.scss';
 
 import { useParams } from 'react-router';
-
+import PropTypes from 'prop-types';
 import tmdbApi from '../../api/tmdbApi';
 import apiConfig from '../../api/apiConfig';
 
@@ -34,6 +34,10 @@ const DetailCast = (props) => {
             ))}
         </div>
     );
+};
+
+DetailCast.propTypes = {
+    id: PropTypes.number.isRequired,
 };
 
 export default DetailCast;

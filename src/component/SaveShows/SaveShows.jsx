@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Button from '../button/Button';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
 import { db } from '../../Firebase';
 import { updateDoc, doc, onSnapshot } from 'firebase/firestore';
 
@@ -19,8 +20,6 @@ function SaveShows(props) {
 
     const movieRef = doc(db, 'users', `${user?.email}`);
 
-    // movieID truyền từ onClick={() => HandleDelete(movie.id)}
-
     // get api from database
     useEffect(() => {
         onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
@@ -31,10 +30,8 @@ function SaveShows(props) {
     // HandleDelete
     const HandleDelete = async (id) => {
         try {
-            // tìm id của movie mà ko bằng với index thì xóa
             const result = movies.filter((x) => x.id !== id);
             await updateDoc(movieRef, {
-                //cập nhập dữ liệu mới xóa lên firebase
                 saveShows: result,
             });
         } catch (error) {
