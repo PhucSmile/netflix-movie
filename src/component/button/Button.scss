@@ -1,0 +1,64 @@
+button {
+    cursor: pointer;
+
+    &.btn {
+        border: 4px solid transparent;
+        background-color: var(--active);
+        color: var(--color-white);
+        border-radius: 5px;
+        padding: 8px 28px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        box-shadow: 0 0 7px 8px #ff00004d;
+        transition: box-shadow 0.3s ease;
+        position: relative;
+        &:hover {
+            box-shadow: 0 0 7px 15px #ff00004d;
+        }
+
+        &.small {
+            border-width: 2px;
+            padding: 0.25rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+
+    &.btn-outline {
+        border: 3px solid var(--color-white);
+        background-color: transparent;
+        color: var(--color-white);
+        box-shadow: unset;
+        transition: color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            box-shadow: unset;
+            color: var(--active) !important;
+            background-color: var(--color-white) !important;
+        }
+
+        &.small {
+            border-width: 2px;
+            padding: 0.25rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    button {
+        &.btn-outline,
+        &.btn {
+            font-size: 1.1rem;
+            padding: 6px 18px;
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    button {
+        &.btn-outline,
+        &.btn {
+            font-size: 0.7rem;
+            padding: 4px 8px;
+        }
+    }
+}

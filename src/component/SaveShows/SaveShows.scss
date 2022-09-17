@@ -1,0 +1,128 @@
+.account {
+    .account__title {
+        font-size: 2rem;
+        padding-left: 30px;
+        margin-bottom: 10px;
+    }
+    .account__wrapper {
+        .swiper-wrapper {
+            padding-left: 30px;
+            .swiper-slide {
+                width: 16%;
+
+                .account__lists {
+                    .account____lists-img {
+                        position: relative;
+
+                        img {
+                            height: 286px;
+                            object-fit: cover;
+                            border-radius: 10px;
+
+                            &:hover {
+                                background-color: var(--main-color);
+                                opacity: 0.5;
+                            }
+                        }
+
+                        a {
+                            color: var(--color-white);
+                            button.btn.small {
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%) scale(0);
+                                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            }
+                        }
+
+                        .icon__close {
+                            position: absolute;
+                            top: 5px;
+                            right: 10px;
+                            cursor: pointer;
+                            transform: scale(0);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        }
+
+                        &:hover a button.btn.small {
+                            transform: translate(-50%, -50%) scale(1);
+                        }
+                        &:hover .icon__close {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .account {
+        .account__title {
+            font-size: 1.3rem;
+        }
+        .account__wrapper {
+            .swiper-wrapper {
+                padding-left: 15px;
+                .swiper-slide {
+                    width: 20%;
+
+                    .account__lists {
+                        .account____lists-img {
+                            img {
+                                height: 200px;
+                            }
+
+                            a {
+                                button.btn.small {
+                                    padding: 2px 16px;
+                                }
+                            }
+                        }
+
+                        .account__lists-title {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .account {
+        .account__title {
+            font-size: 1.1rem;
+        }
+        .account__wrapper {
+            .swiper-wrapper {
+                padding-left: 20px;
+                .swiper-slide {
+                    width: 26%;
+
+                    .account__lists {
+                        .account____lists-img {
+                            img {
+                                height: 150px;
+                            }
+
+                            a {
+                                button.btn.small {
+                                    font-size: 0.8rem;
+                                    padding: 0px 8px;
+                                }
+                            }
+                        }
+
+                        .account__lists-title {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

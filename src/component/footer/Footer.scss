@@ -1,0 +1,50 @@
+.footer__login {
+    padding-bottom: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #c8c8c8;
+    background-image: url(../../assets/images/footer-bg.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .footer__container {
+        padding: 70px 45px;
+
+        .footer__question {
+            font-size: 1.6rem;
+
+            margin-bottom: 30px;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .lists {
+            font-size: 1.3rem;
+
+            .item {
+                margin-bottom: 16px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .footer__login {
+        .footer__container {
+            padding: 0 20px 20px 20px;
+            .footer__question {
+                font-size: 1.3em;
+            }
+
+            .lists {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

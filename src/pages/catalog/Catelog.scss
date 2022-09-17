@@ -1,0 +1,74 @@
+.catelog__form {
+    .input-group {
+        max-width: 500px;
+        .form-control {
+            position: relative;
+            border-radius: 30px;
+            height: 40px;
+            padding-right: 40px;
+        }
+
+        .icon__loading,
+        .icon__close {
+            position: absolute;
+            right: 27%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--main-color);
+            font-size: 1.3rem;
+            z-index: 5;
+            cursor: pointer;
+        }
+
+        .icon__loading {
+            animation: loading 0.8s linear infinite;
+        }
+        @keyframes loading {
+            from {
+                transform: translateY(-50%) rotate(0deg);
+            }
+            to {
+                transform: translateY(-50%) rotate(360deg);
+            }
+        }
+
+        button.btn {
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+            height: 40px;
+            font-size: 1rem;
+            line-height: 1rem;
+            &:hover {
+                background-color: var(--active);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .input-group {
+        max-width: 400px;
+        .form-control {
+            height: 30px;
+            padding-right: 40px;
+        }
+
+        button.btn {
+            height: 30px;
+            font-size: 0.9rem;
+            line-height: 0.7rem;
+        }
+    }
+
+    .btn__paginate {
+        button.btn-outline.small {
+            font-size: 0.8em;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .input-group {
+        max-width: 300px;
+    }
+}

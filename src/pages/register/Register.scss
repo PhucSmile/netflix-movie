@@ -1,0 +1,189 @@
+.register {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%),
+        url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+    background-size: cover;
+    position: relative;
+    padding: 80px 0;
+
+    .register__overlay {
+        max-width: 450px;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.75);
+
+        Form {
+            padding: 60px 68px 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            h1 {
+                font-size: 32px;
+                font-weight: 700;
+                color: var(--color-white);
+                margin-bottom: 28px;
+            }
+
+            .form-control {
+                height: 50px;
+                width: 100%;
+                background-color: #333;
+                color: var(--color-white);
+                border: none;
+
+                &::placeholder {
+                    color: #8c8c8c;
+                    font-size: 14px;
+                }
+            }
+
+            .sigIn__btn {
+                height: 50px;
+                width: 100%;
+                background-color: #e50914;
+                color: var(--color-white);
+                margin-bottom: 12px;
+
+                &:hover {
+                    border-color: #e50914;
+                }
+                &:focus {
+                    border-color: transparent;
+                }
+            }
+
+            .remember {
+                display: flex;
+                justify-content: space-between;
+                color: #b3b3b3;
+                font-size: 13px;
+
+                p {
+                    &:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .form-check {
+                padding-left: 1.6rem;
+            }
+
+            input[type='checkbox'] {
+                font-size: 18px;
+                margin-top: 0px;
+                background-color: #737373;
+            }
+
+            .error {
+                background-color: var(--active);
+                font-size: 1.1rem;
+                line-height: 20px;
+                padding-left: 12px;
+                border-radius: 4px;
+            }
+        }
+        .desc {
+            margin-top: 95px;
+            display: flex;
+            flex-direction: column;
+
+            span {
+                color: #737373;
+                font-size: 16px;
+
+                span {
+                    a {
+                        font-size: 16px;
+                        color: var(--color-white);
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            p {
+                margin: 13px 0;
+                color: #8c8c8c;
+                font-size: 13px;
+
+                span {
+                    color: #071eb0;
+                    font-size: 13px;
+                    &:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .register {
+        background: var(--main-color);
+        padding-bottom: 0;
+
+        .register__header {
+            height: 45px;
+            background-color: var(--main-color);
+
+            .register__left {
+                height: 30px;
+                width: 100px;
+                margin-left: 20px;
+            }
+
+            .register__right {
+                margin-top: 12px;
+                .btn__language {
+                    margin: -2px 12px 0px 12px;
+                    height: 26px;
+                    width: 87px;
+                    font-size: 14px;
+
+                    .select.select.form-select {
+                        padding: 0px 17px;
+                        font-size: 14px;
+                        background-size: 8px 8px;
+                    }
+                    .language .icon {
+                        font-size: 14px;
+                    }
+                }
+
+                a {
+                    .singUp {
+                        height: 26px;
+                        width: 87px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .register__overlay {
+            min-height: 570px;
+            .desc {
+                margin-top: 0px;
+            }
+
+            Form {
+                padding: 0 16px;
+            }
+        }
+    }
+}

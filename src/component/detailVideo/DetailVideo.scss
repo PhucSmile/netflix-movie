@@ -1,0 +1,38 @@
+.video {
+    margin-bottom: 48px;
+    .video__title {
+        margin-bottom: 24px;
+        h2 {
+            font-weight: 600;
+        }
+    }
+    iframe {
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .video {
+        .video__title {
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+        iframe {
+            height: 75vh;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .video {
+        .video__title {
+            h2 {
+                font-size: 1rem;
+            }
+        }
+        iframe {
+            height: 50vh;
+        }
+    }
+}

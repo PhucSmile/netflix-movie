@@ -1,0 +1,92 @@
+.movie__item {
+    .movie__item-wrap {
+        .movie__img {
+            position: relative;
+            img {
+                height: 286px;
+                object-fit: cover;
+                border-radius: 10px;
+                &:hover {
+                    background-color: var(--main-color);
+                    opacity: 0.5;
+                }
+            }
+
+            button.btn.small {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .icon {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                cursor: pointer;
+                transform: scale(0);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &.active {
+                    color: var(--active);
+                }
+            }
+
+            &:hover button.btn.small {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            &:hover .icon {
+                transform: scale(1);
+            }
+        }
+
+        .movie__item-title {
+            font-size: 1.2rem;
+        }
+        &:hover .movie__item-title {
+            color: var(--active);
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .movie__item {
+        .movie__item-wrap {
+            .movie__img {
+                img {
+                    height: 200px;
+                }
+            }
+
+            a {
+                button.btn.small {
+                    padding: 2px 16px;
+                }
+            }
+
+            .movie__item-title {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    .movie__item {
+        .movie__item-wrap {
+            .movie__img {
+                img {
+                    height: 150px;
+                }
+
+                button.btn.small {
+                    padding: 0px 8px;
+                    font-size: 0.8rem;
+                }
+
+                .icon {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
