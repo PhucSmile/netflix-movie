@@ -12,8 +12,8 @@ import ProtectedRouter from '../component/hook/ProtectedRouter';
 const Routers = () => {
     return (
         <Routes>
-            <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/netflix-movie" element={<Navigate to="/" />} />
+            <Route path="/" element={<Home />} />
             <Route path="/:category/search/:keyword" element={<Catelog />} />
             <Route path="/:category/:id" element={<Detail />} />
             <Route path="/:category" element={<Catelog />} />

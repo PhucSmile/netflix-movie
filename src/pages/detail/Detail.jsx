@@ -21,9 +21,13 @@ const Detail = () => {
 
     useEffect(() => {
         const getDetail = async () => {
-            const response = await tmdbApi.detail(category, id, { params: {} });
-            setGetInfor(response);
-            window.scrollTo(0, 0);
+            try {
+                const response = await tmdbApi.detail(category, id, { params: {} });
+                setGetInfor(response);
+                window.scrollTo(0, 0);
+            } catch (error) {
+                console.log(error);
+            }
         };
         getDetail();
     }, [category, id]);
@@ -58,7 +62,7 @@ const Detail = () => {
                                             </h1>
                                             <div className="detail__genres">
                                                 {getInfor.genres &&
-                                                    getInfor.genres.slice(0, 5).map((genre, index) => (
+                                                    getInfor.genres.slice(1, 3).map((genre, index) => (
                                                         <span key={index} className="detail__genres-btn ">
                                                             {genre.name}
                                                         </span>

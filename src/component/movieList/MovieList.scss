@@ -42,14 +42,16 @@
 @media only screen and (max-width: 576px) {
     .movie__list {
         .section__list {
+            padding: 0 15px;
+
             h2 {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             a {
                 button.btn-outline.small {
-                    font-size: 0.8em;
-                    padding: 4px 5px;
+                    font-size: 0.8rem;
+                    padding: 4px;
                 }
             }
         }

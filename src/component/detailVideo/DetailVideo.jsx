@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './DetailVideo.scss';
 import PropTypes from 'prop-types';
 
@@ -15,7 +15,7 @@ const DetailVideo = (props) => {
         const getVideos = async () => {
             try {
                 const response = await tmdbApi.getVideos(category, props.id);
-                setVideo(response.results.slice(0, 2));
+                setVideo(response.results.slice(1, 3));
             } catch (err) {
                 console.log(err);
             }

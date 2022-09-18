@@ -59,7 +59,7 @@ function SaveShows(props) {
 
                                           <CloseIcon className="icon__close" onClick={() => HandleDelete(item.id)} />
                                       </div>
-                                      <span className="account__lists-title text-center mt-2 ">{item.title}</span>
+                                      <span className="account__lists-title mt-2 ">{item.title}</span>
                                   </div>
                               </SwiperSlide>
                           ))

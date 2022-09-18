@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './MovieItem.scss';
 import Button from '../button/Button';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import apiConfig from '../../api/apiConfig';
 import { db } from '../../Firebase';
@@ -66,7 +66,7 @@ const MovieItem = (props) => {
 
                     <FavoriteBorderIcon className={`icon ${active ? 'active' : ''}`} onClick={() => saveShow('add')} />
                 </div>
-                <span className="movie__item-title text-center mt-2">{API.title || API.name}</span>
+                <span className="movie__item-title mt-2">{API.title || API.name}</span>
             </div>
         </div>
     );
